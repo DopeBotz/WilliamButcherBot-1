@@ -100,18 +100,12 @@ home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="✘ Commands ✘", callback_data="bot_commands"
+                text="Help & Commands", callback_data="bot_commands"
             ),
             InlineKeyboardButton(
-                text="✘ Owner ✘",
-                url="https://github.com/thehamkercat/WilliamButcherBot",
+                text="Owner",
+                url="https://t.me/DemonBinner",
             ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="➕ Add Me To Your Group ➕",
-                url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
-            )
         ],
     ]
 )
@@ -119,7 +113,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
 home_text_pm = (
     f"Hey there! My name is {BOT_NAME}. I can manage your "
     + "group with lots of useful features, feel free to "
-    + "add me to your group."
+    + "add me to your group.[]("
 )
 
 
@@ -130,21 +124,8 @@ async def help_command(_, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="Help ❓",
+                        text="Help & Commands",
                         url=f"t.me/{BOT_USERNAME}?start=help",
-                    ),
-                    InlineKeyboardButton(
-                        text="Repo 🛠",
-                        url="https://github.com/thehamkercat/WilliamButcherBot",
-                    ),
-                ],
-                [
-                    InlineKeyboardButton(
-                        text="System Stats 💻",
-                        callback_data="stats_callback",
-                    ),
-                    InlineKeyboardButton(
-                        text="Support 👨", url="t.me/WBBSupport"
                     ),
                 ],
             ]
@@ -179,10 +160,9 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hello {first_name}, My name is {bot_name}.
-I'm a group management bot with some useful features.
-You can choose an option below, by clicking a button.
-Also you can ask anything in Support Group.
+        """Heya {first_name}, My name is {bot_name}.
+
+I'm a group management bot with some useful features and I am a witch.
 """.format(
             first_name=name,
             bot_name=BOT_NAME,
@@ -219,13 +199,13 @@ async def help_button(client, query):
     create_match = re.match(r"help_create", query.data)
     top_text = f"""
 Hello {query.from_user.first_name}, My name is {BOT_NAME}.
-I'm a group management bot with some usefule features.
-You can choose an option below, by clicking a button.
-Also you can ask anything in Support Group.
+Here is the list of all possible **commands**:
+- /start: Starts me! You've probably already used this.
+- /help: Sends this message; I'll tell you more about myself!
+- /donate: Gives you info on how to support me and my creator.
 
-General command are:
- - /start: Start the bot
- - /help: Give this message
+If you have any bugs or questions on how to use me head to @TheRyuzakiBot.
+**All commands can be used with the following: / ? !**
  """
     if mod_match:
         module = mod_match.group(1)
