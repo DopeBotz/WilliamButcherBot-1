@@ -113,7 +113,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
 home_text_pm = (
     f"Hey there! My name is {BOT_NAME}. I can manage your "
     + "group with lots of useful features, feel free to "
-    + "add me to your group.[](https://te.legra.ph/file/2a18305793e1087c76095.jpg)"
+    + "add me to your group[.](https://te.legra.ph/file/2a18305793e1087c76095.jpg)"
 )
 
 
@@ -204,7 +204,7 @@ Here is the list of all possible **commands**:
 - /help: Sends this message; I'll tell you more about myself!
 - /donate: Gives you info on how to support me and my creator.
 
-If you have any bugs or questions on how to use me head to @TheRyuzakiBot.
+If you have any bugs or questions on how to use me head to @MissElianaBot.
 **All commands can be used with the following: / ? !**
  """
     if mod_match:
