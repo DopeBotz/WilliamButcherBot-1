@@ -35,7 +35,7 @@ from wbb.utils.functions import (extract_user, extract_user_and_reason,
                                  time_converter)
 
 __MODULE__ = "Admin"
-__HELP__ = """\n「 **Ban Commands** 」\n• /ban - **Ban A User**
+__HELP__ = """\n        「 **Ban & Warns** 」\n• /ban - **Ban A User**
 • /dban - **Delete the replied message banning its sender**
 • /tban - **Ban A User For Specific Time**
 • /unban - **Unban A User**
@@ -44,7 +44,7 @@ __HELP__ = """\n「 **Ban Commands** 」\n• /ban - **Ban A User**
 • /rmwarns - **Remove All Warning of A User**
 • /warns - **Show Warning Of A User**
 
-          「 **Kick & Mute Commands** 」
+          「 **Kick & Mute** 」
 
 • /kick - **Kick A User**
 • /dkick - **Delete the replied message kicking its sender**
@@ -52,7 +52,7 @@ __HELP__ = """\n「 **Ban Commands** 」\n• /ban - **Ban A User**
 • /tmute - **Mute A User For Specific Time**
 • /unmute - **Unmute A User**
               
-          「 **Promote & Demote Commnands** 」
+          「 **Promote & Demote** 」
 
 • /promote - **Promote A Member**
 • /fullpromote - **Promote A Member With All Rights**
